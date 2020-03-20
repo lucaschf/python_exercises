@@ -8,10 +8,6 @@
 # DESAFIO: exiba todas as sublistas de 2 elementos possíveis
 
 
-def are_equals(items, other_items):
-    return items == other_items
-
-
 def has_same_content(items, other_items):
     return len(items) == len(other_items) and set(items) == set(other_items)
 
@@ -23,5 +19,5 @@ if __name__ == "__main__":
     print(f"Content\n{content}\n")
     print(f"Other content\n{otherContent}\n")
 
-    print(f"Are equals: {are_equals(content, otherContent)}")
+    print(f"Are equals: {content == otherContent}")
     print(f"Has same content: {has_same_content(content, otherContent)}")
