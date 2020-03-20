@@ -13,14 +13,14 @@
 # ]
 
 
-def execute(championship_result):
+def championship_result(result):
     total_faults = 0
     championship_faults = dict()
 
     more_faults = ""
     less_faults = ""
 
-    for item in championship_result:
+    for item in result:
         match_faults = item[-1]  # last item is the faults list
         total_faults += sum(match_faults)
 
@@ -49,6 +49,6 @@ def execute(championship_result):
 
 
 if __name__ == "__main__":
-    print(dict(
-        execute([["Brasil", "Italia", [10, 9]], ["Brasil", "Espanha", [5, 7]], ["Italia", "Espanha", [7, 8]]])
-    ))
+    matches = [["Brasil", "Italia", [10, 9]], ["Brasil", "Espanha", [5, 7]], ["Italia", "Espanha", [7, 8]]]
+
+    print(dict(championship_result(matches)))

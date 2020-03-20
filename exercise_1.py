@@ -10,18 +10,21 @@
 # DESAFIO: exiba todas as sublistas de 2 elementos possíveis
 
 import numpy
+import exercise_8
 
 
 def execute(items):
-    yield "biggest", max(items)  # biggest element
-    yield "sum", sum(items)  # sum of elements
-    yield "occurrences_first_element", items.count(items[0])  # number of occurrences of an element
-    yield "media", numpy.mean(items)  # mean of the elements
-    # todo letter e
-    yield "negative_sum", sum(filter(lambda n: n < 0, items))  # sum of negative elements
+    yield "biggest", max(items)
+    yield "sum", sum(items)
+    yield "occurrences_first_element", items.count(items[0])
+    yield "media", numpy.mean(items)
+    yield "closest_to_average", exercise_8.closest_to_average(items)
+    yield "negative_sum", sum(filter(lambda n: n < 0, items))
     # todo letter g
 
 
 if __name__ == "__main__":
-    for i in execute([1, 2, 4, 5, 6, 7]):
+    list_item = [1, 2, 4, 5, 6, 7]
+
+    for i in execute(list_item):
         print(i)

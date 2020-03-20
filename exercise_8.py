@@ -15,4 +15,6 @@ def closest_to_average(items):
 
 
 if __name__ == "__main__":
-    print(closest_to_average([2.5, 7.5, 10.0, 4.0]))
+    list_items = [2.5, 7.5, 10.0, 4.0]
+
+    print(closest_to_average(list_items))

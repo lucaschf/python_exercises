@@ -30,4 +30,6 @@ def compound_words_counter(items):
 
 
 if __name__ == "__main__":
-    print(dict(execute(["Lucas", "bate-papo", "guarda-chuva"])))
+    list_items = ["Lucas", "bate-papo", "guarda-chuva"]
+    
+    print(dict(execute(list_items)))

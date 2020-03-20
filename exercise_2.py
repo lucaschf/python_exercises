@@ -23,5 +23,7 @@ def execute(items):
 
 
 if __name__ == "__main__":
-    for i in execute([1, "DASD", 2, 4, 905, 6, 7, 'a', 8006.0]):
+    list_item = [1, "DASD", 2, 4, 905, 6, 7, 'a', 8006.0]
+    
+    for i in execute(list_item):
         print(i)

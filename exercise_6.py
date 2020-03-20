@@ -15,11 +15,13 @@ def decrypt(message):
 
     decrypted = ''
 
-    for c in message:
-        decrypted += encryption_key[c]
+    for key_code in message:
+        decrypted += encryption_key[key_code]
 
     return decrypted
 
 
 if __name__ == "__main__":
-    print(decrypt([2, 15, 13, 0, 4, 9, 1]))
+    encrypted_message = [2, 15, 13, 0, 4, 9, 1]
+
+    print(decrypt(encrypted_message))
